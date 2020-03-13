@@ -1,0 +1,257 @@
+/*
+ * Все паршалы импортировать в этот файл
+ */
+
+@import 'vars.scss';
+
+// BASE
+
+@import 'normalize.scss';
+@import 'base.scss';
+
+// Components
+
+@import './components/header.scss';
+@import './components/top-banner.scss';
+@import './components/menu-about.scss';
+@import './components/footer.scss';
+@import './components/section-news.scss';
+
+/*Section New collection and Featured products*/
+.new-collection {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-color: $color-section;
+}
+
+.section {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.top-header {
+  margin: 0;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: $font-primary;
+  font-size: 48px;
+  color: $color-for-header;
+  text-transform: uppercase;
+}
+
+.top-header::after {
+  display: block;
+  height: 15px;
+  width: 165px;
+  content: '';
+  margin: auto;
+  margin-top: 30px;
+  margin-bottom: 75px;
+  background-image: url('../images/line.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.gallery {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery__list {
+  list-style-type: none;
+}
+
+.gallery__list {
+  display: flex;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.gallery__list > a {
+  color: $color-gallery-text;
+}
+
+.gallery__list:nth-child(4n) {
+  margin-right: 0;
+}
+
+.gallery__list:nth-last-child(-n + 4) {
+  margin-bottom: 0;
+}
+
+.gallery__link {
+  position: relative;
+  text-decoration: none;
+  display: flex;
+  width: 255px;
+  height: 320px;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.gallery__link::before {
+  position: absolute;
+  content: '';
+  width: 234px;
+  height: 266px;
+  top: 6px;
+  left: 11px;
+  background-color: rgba(0, 0, 0, 0.4);
+
+  transform: translateY(110%);
+  transition: transform $animation-time $timing-fn;
+}
+
+.gallery__link:hover::before {
+  transform: translateY(0);
+  display: block;
+}
+
+.gallery__header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: $color-primary-text;
+  width: 200px;
+  height: 40px;
+  position: absolute;
+  text-transform: uppercase;
+}
+
+.gallery__price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 18px;
+  background-color: $color-secondary-text;
+  width: 55px;
+  height: 40px;
+  position: absolute;
+  right: 0;
+}
+
+.gallery__link:hover .gallery__header {
+  background-color: $color-brand;
+}
+
+.gallery__link:hover .gallery__price {
+  background-color: $color-hover-price;
+}
+
+.gallery__img {
+  width: 255px;
+}
+
+.gallery__buttons {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  display: none;
+  justify-content: space-between;
+  align-items: inherit;
+  flex-wrap: wrap;
+  width: 164px;
+  height: 114px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+
+  transition: opacity $animation-time $timing-fn;
+}
+
+.gallery__buttons:hover {
+  opacity: 1;
+}
+
+.gallery__buttons > button {
+  margin: 0;
+  padding: 0;
+}
+
+.gallery__button {
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  width: 50px;
+  height: 50px;
+  border: 1px solid $color-gallery-text;
+}
+
+.gallery__icon {
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  fill: $color-gallery-text;
+}
+
+.gallery__button--cart {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: transparent;
+  width: 164px;
+  height: 50px;
+  border: 1px solid $color-gallery-text;
+}
+
+.gallery__icon--text {
+  display: block;
+  margin: 0;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-right: auto;
+  margin-left: auto;
+  font-family: $font-secondary;
+  font-size: 14px;
+  color: $color-gallery-text;
+}
+
+.gallery__buttons > button:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery__button:hover,
+.gallery__button:focus {
+  background-color: $color-brand;
+  cursor: pointer;
+}
+
+.gallery__button--cart:hover,
+.gallery__button--cart:focus {
+  background-color: $color-primary-text;
+  cursor: pointer;
+}
+
+.gallery__link:hover > .gallery__buttons {
+  display: flex;
+  opacity: 1;
+}

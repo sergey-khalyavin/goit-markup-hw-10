@@ -1,0 +1,158 @@
+.header {
+  display: block;
+  justify-content: space-between;
+}
+
+.top {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.contact-nav,
+.top__nav {
+  display: flex;
+  align-items: center;
+}
+
+.top__nav {
+  justify-content: space-around;
+  height: 50px;
+  background-color: $color-brand;
+}
+
+.contact-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.call,
+.email {
+  text-decoration: none;
+  color: $color-gallery-text;
+  font-size: 14px;
+  font-family: $font-secondary;
+}
+
+.contact-nav__list a {
+  display: flex;
+  padding-right: 30px;
+  align-items: center;
+}
+
+.contact-nav:nth-child(2n) {
+  padding-right: 0;
+}
+
+.contact-nav__list {
+  display: block;
+  list-style: none;
+}
+
+.account-nav__item:focus,
+.account-nav__item:hover,
+.contact-nav__list:focus,
+.contact-nav__list:hover {
+  text-decoration: underline;
+}
+
+.contact-nav__icon {
+  display: block;
+  width: 32px;
+  height: 18px;
+  fill: $color-gallery-text;
+  padding-right: 8px;
+}
+
+.account-nav {
+  margin: 0;
+  padding: 0;
+  width: 425px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-nav__item {
+  display: block;
+  list-style: none;
+}
+
+.account-nav a {
+  text-decoration: none;
+  color: $color-gallery-text;
+  font-family: $font-secondary;
+  font-size: 14px;
+}
+
+.below-top__logo:first-of-type:first-letter {
+  font-weight: 700;
+  color: $color-brand;
+  font-family: $font-primary;
+  font-size: 30px;
+}
+
+.below-top__logo:first-letter {
+  font-size: 2.5em;
+}
+
+.below-top__logo-mart {
+  color: $color-text;
+  text-decoration: none;
+  margin: 0;
+  font-family: $font-primary;
+  text-transform: uppercase;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.below-top__logo .below-top__logo-mart:focus,
+.below-top__logo .below-top__logo-mart:hover {
+  color: $color-hover;
+}
+
+.below-top__menu,
+.below-top__nav {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.below-top__menu {
+  margin: 0;
+  padding: 0;
+  width: 465px;
+  display: inline-flex;
+  text-transform: uppercase;
+  list-style-type: none;
+}
+
+.below-top__nav {
+  display: flex;
+  margin: auto;
+  height: 90px;
+}
+
+.below-top__item {
+  display: block;
+  color: $color-top-nav;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+  padding: 5px 11px;
+}
+
+.below-top__item:last-child {
+  padding-right: 0;
+}
+
+.below-top__link {
+  display: block;
+  text-decoration: none;
+  color: $color-top-nav;
+}
+
+.below-top__link:focus,
+.below-top__link:hover {
+  color: $color-brand;
+}

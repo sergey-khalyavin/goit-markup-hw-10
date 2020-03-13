@@ -1,0 +1,79 @@
+.top-banner-box {
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.4)
+    ),
+    url('../images/top-banner.jpg');
+  background-repeat: no-repeat;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .top-banner-box {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.4),
+        rgba(0, 0, 0, 0.4)
+      ),
+      url('../images/top-banner@2x.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
+.top-banner {
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.top-banner a,
+.top-banner > p {
+  color: $color-gallery-text;
+  font-family: $font-primary;
+}
+
+.top-banner > p {
+  padding: 0;
+  margin: 0 0 25px;
+  text-align: center;
+  font-size: 48px;
+  line-height: normal;
+}
+
+.top-banner a,
+.top-banner__text-lite {
+  font-weight: 300;
+}
+
+.top-banner__text-bold {
+  font-weight: 400;
+}
+
+.top-banner__text-sale {
+  color: $color-brand;
+  font-weight: 400;
+}
+
+.top-banner a {
+  text-decoration: none;
+  font-size: 14px;
+  background-color: $color-brand;
+}
+
+.top-banner__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.top-banner__link:focus,
+.top-banner__link:hover {
+  background-color: $color-hover;
+  cursor: pointer;
+}

@@ -1,0 +1,106 @@
+.blog-line {
+  margin-left: 0;
+  margin-bottom: 45px;
+  width: 135px;
+  height: 3px;
+}
+
+.bottom__form {
+  display: flex;
+  justify-content: center;
+  width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.line-invert {
+  height: 50px;
+  background-position: top;
+}
+
+.bottom__banner {
+  background-image: url('../images/footer_backgroung.jpg');
+  background-repeat: no-repeat;
+  justify-content: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+@media screen and (min-resolution: 2dppx) {
+  .bottom__banner {
+    background-image: url('../images/footer_backgroung@2x.jpg');
+    background-repeat: no-repeat;
+  }
+}
+
+.bottom-line {
+  height: 15px;
+  width: 165px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 25px;
+  background-image: url('../images/line-invert.png');
+}
+
+.bottom__header {
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0 auto 30px auto;
+  font-family: $font-primary;
+  font-size: 48px;
+  color: $color-for-header;
+}
+
+.bottom__header::after {
+  display: block;
+  height: 15px;
+  width: 165px;
+  content: '';
+  margin: 30px auto auto;
+  background-image: url('../images/line_invert.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.bottom__text {
+  padding: 0;
+  margin: 0 0 45px;
+  font-family: $font-secondary;
+  font-size: 16px;
+  text-align: center;
+  color: $color-gallery-text;
+}
+
+.bottom__submit {
+  width: 95px;
+  height: 60px;
+  right: 0;
+  border-radius: 0 5px 5px 0;
+  border: 2px solid #fff;
+  background-color: $color-hover;
+}
+
+.button__icon {
+  display: block;
+  width: 65px;
+  height: 40px;
+  fill: $color-gallery-text;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.bottom__submit:hover,
+.bottom__submit:focus {
+  background-color: $color-brand;
+  cursor: pointer;
+}
+
+.bottom__input {
+  width: 445px;
+  height: 60px;
+  padding-left: 30px;
+  border-radius: 5px 0 0 5px;
+  border-style: none;
+  font-family: $font-secondary;
+}
