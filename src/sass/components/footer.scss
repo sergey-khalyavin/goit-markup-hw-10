@@ -49,18 +49,18 @@
   font-family: $font-primary;
   font-size: 48px;
   color: $color-for-header;
-}
 
-.bottom__header::after {
-  display: block;
-  height: 15px;
-  width: 165px;
-  content: '';
-  margin: 30px auto auto;
-  background-image: url('../images/line_invert.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  &::after {
+    display: block;
+    height: 15px;
+    width: 165px;
+    content: '';
+    margin: 30px auto auto;
+    background-image: url('../images/line_invert.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .bottom__text {
@@ -79,6 +79,12 @@
   border-radius: 0 5px 5px 0;
   border: 2px solid #fff;
   background-color: $color-hover;
+
+  &:hover,
+  &:focus {
+    background-color: $color-brand;
+    cursor: pointer;
+  }
 }
 
 .button__icon {
@@ -88,12 +94,6 @@
   fill: $color-gallery-text;
   margin-left: auto;
   margin-right: auto;
-}
-
-.bottom__submit:hover,
-.bottom__submit:focus {
-  background-color: $color-brand;
-  cursor: pointer;
 }
 
 .bottom__input {

@@ -9,7 +9,7 @@
 @import 'normalize.scss';
 @import 'base.scss';
 
-// Components
+// COMPONENTS
 
 @import './components/header.scss';
 @import './components/top-banner.scss';
@@ -44,20 +44,20 @@
   font-size: 48px;
   color: $color-for-header;
   text-transform: uppercase;
-}
 
-.top-header::after {
-  display: block;
-  height: 15px;
-  width: 165px;
-  content: '';
-  margin: auto;
-  margin-top: 30px;
-  margin-bottom: 75px;
-  background-image: url('../images/line.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
+  &::after {
+    display: block;
+    height: 15px;
+    width: 165px;
+    content: '';
+    margin: auto;
+    margin-top: 30px;
+    margin-bottom: 75px;
+    background-image: url('../images/line.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
 }
 
 .gallery {
@@ -67,10 +67,6 @@
   flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
-}
-
-.gallery__list {
-  list-style-type: none;
 }
 
 .gallery__list {
@@ -99,19 +95,19 @@
   height: 320px;
   align-items: flex-end;
   overflow: hidden;
-}
 
-.gallery__link::before {
-  position: absolute;
-  content: '';
-  width: 234px;
-  height: 266px;
-  top: 6px;
-  left: 11px;
-  background-color: rgba(0, 0, 0, 0.4);
+  &::before {
+    position: absolute;
+    content: '';
+    width: 234px;
+    height: 266px;
+    top: 6px;
+    left: 11px;
+    background-color: rgba(0, 0, 0, 0.4);
 
-  transform: translateY(110%);
-  transition: transform $animation-time $timing-fn;
+    transform: translateY(110%);
+    transition: transform $animation-time $timing-fn;
+  }
 }
 
 .gallery__link:hover::before {
@@ -180,15 +176,10 @@
   opacity: 0;
 
   transition: opacity $animation-time $timing-fn;
-}
 
-.gallery__buttons:hover {
-  opacity: 1;
-}
-
-.gallery__buttons > button {
-  margin: 0;
-  padding: 0;
+  &:hover {
+    opacity: 1;
+  }
 }
 
 .gallery__button {
@@ -198,6 +189,12 @@
   width: 50px;
   height: 50px;
   border: 1px solid $color-gallery-text;
+
+  &:hover,
+  &:focus {
+    background-color: $color-brand;
+    cursor: pointer;
+  }
 }
 
 .gallery__icon {
@@ -221,6 +218,12 @@
   width: 164px;
   height: 50px;
   border: 1px solid $color-gallery-text;
+
+  &:hover,
+  &:focus {
+    background-color: $color-primary-text;
+    cursor: pointer;
+  }
 }
 
 .gallery__icon--text {
@@ -237,18 +240,6 @@
 
 .gallery__buttons > button:nth-child(3n) {
   margin-right: 0;
-}
-
-.gallery__button:hover,
-.gallery__button:focus {
-  background-color: $color-brand;
-  cursor: pointer;
-}
-
-.gallery__button--cart:hover,
-.gallery__button--cart:focus {
-  background-color: $color-primary-text;
-  cursor: pointer;
 }
 
 .gallery__link:hover > .gallery__buttons {
